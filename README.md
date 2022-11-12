@@ -5,7 +5,7 @@ A micro snapshot testing tool that works very well with the Node >=18 built-in [
 ```
 npm install --save-dev usnap utap
 ```
-*Note:* [`utap`](https://github.com/dmaevsky/utap) is of course optional: it is a test TAP output formatter
+*Note:* [`utap`](https://github.com/dmaevsky/utap) is of course optional: it is a test TAP output formatter.
 
 `my.test.js`:
 ```js
@@ -32,9 +32,9 @@ node my.test.js -u | npx utap
 
 ## But why?
 
-- The currently built-in [`assert.snapshot`](https://nodejs.org/docs/latest-v18.x/api/assert.html#assertsnapshotvalue-name) is horrible since it is using `util.inspect` for serialization, with default options, which means limited depth and basically produces garbage
+- The currently built-in [`assert.snapshot`](https://nodejs.org/docs/latest-v18.x/api/assert.html#assertsnapshotvalue-name) is horrible since it is using [`util.inspect`](https://nodejs.org/docs/latest-v18.x/api/util.html#utilinspectobject-options) for serialization, with default options, which means limited depth and basically produces garbage.
 - `μsnap` relies on YAML. One could not possibly choose a better format for snapshots, since it is
-  - perfectly human-readable, git-friendly, and ubiquitously supported
+  - perfectly human-readable, git-friendly, and ubiquitously supported;
   - homomorphic in the sense
   ```js
   assert.equal(YAML.stringify(array), array.map(a => YAML.stringify([a])).join(''))
