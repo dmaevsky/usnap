@@ -1,0 +1,26 @@
+{
+  "name": "usnap",
+  "version": "0.1.0",
+  "description": "Micro alternative to assert.snapshot",
+  "type": "module",
+  "main": "src/usnap.js",
+  "scripts": {
+    "test": "find tests -type f -name '*.test.js' -exec echo \\# utap-src:{} \\; -exec node {} \\; | utap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmaevsky/usnap.git"
+  },
+  "keywords": [
+    "snapshot",
+    "testing"
+  ],
+  "author": "Dmitry Maevsky",
+  "license": "MIT",
+  "dependencies": {
+    "yaml": "^2.1.3"
+  },
+  "devDependencies": {
+    "utap": "^0.1.2"
+  }
+}
