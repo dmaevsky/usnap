@@ -1,7 +1,7 @@
 {
   "name": "usnap",
   "version": "0.1.0",
-  "description": "Micro alternative to assert.snapshot",
+  "description": "DEPRECATED: use t.assert.snapshot() from node:test instead",
   "type": "module",
   "main": "src/usnap.js",
   "scripts": {
